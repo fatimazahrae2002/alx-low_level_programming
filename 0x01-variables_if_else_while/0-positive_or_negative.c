@@ -1,11 +1,13 @@
+/*
+ * File: 0-positive_or_negative.c
+ * Auth: Fatima Ezahraa Graini
+ */
+
+
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
+#include <stdio.h> 
 
-/* 
- * file : 0-positive_or_negative.c
- * author : fatimazahrae graini
- */
 
 int main(void)
 {
