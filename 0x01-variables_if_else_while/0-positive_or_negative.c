@@ -3,11 +3,15 @@
  * Auth: Fatima Ezahraa Graini
  */
 
-
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h> 
 
+/*
+ * prints a random number and and states whether
+ *    it is positive, negative, or zero.
+ *
+ */
 
 int main(void)
 {
