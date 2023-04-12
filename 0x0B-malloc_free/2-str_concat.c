@@ -3,28 +3,39 @@
 #include <stdlib.h>
 
 /**
- * *_calloc - function to allocates memory
- * @nmemb: unsigned int type
- * @size: unsigned int type
- * Return: return pointer to array
+ * str_concat - Entry point
+ *@s1: string 1
+ *@s2: string 2
+ * Return: pointer should point to a newly allocated space in memory or NULL
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+char *str_concat(char *s1, char *s2)
 {
-	char *ptr;
-	unsigned int count;
+	char *strnew = NULL;
+	unsigned int i;
+	int n1;
+	int n2;
+	int count;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	ptr = malloc(nmemb * size);
-	if (ptr == NULL)
+	count = 0;
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	for (n1 = 0; s1[n1] != '\0'; n1++)
+		;
+	for (n2 = 0; s2[n2] != '\0'; n2++)
+		;
+	strnew = (char *)malloc((n1 + n2 + 1) * sizeof(char));
+	if (strnew == NULL)
 	{
 		return (NULL);
 	}
-	count = 0;
-	while (count < nmemb * size)
+	for (i = 0; s1[i] != '\0'; i++)
+		strnew[i] = s1[i];
+	for (; s2[count] != '\0'; i++)
 	{
-		ptr[count] = 0;
+		strnew[i] = s2[count];
 		count++;
 	}
-	return (ptr);
+	return (strnew);
 }
