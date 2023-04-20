@@ -1,1 +1,1 @@
- malloc, free in c programming
+ Prototype: void print_name(char *name, void (*f)(char *));
