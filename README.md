@@ -1,1 +1,1 @@
- Prototype: void print_name(char *name, void (*f)(char *));
+# 0x10. C - Variadic functions
